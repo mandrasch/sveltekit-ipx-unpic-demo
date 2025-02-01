@@ -1,38 +1,16 @@
-# sv
+# sveltekit-ipx-unpic-demo
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+Demo for https://dev.to/mandrasch/optimize-external-dynamic-images-on-the-fly-in-sveltekit-25k8, SvelteKit v2 and unpic v1.
 
 ```bash
-# create a new project in the current directory
-npx sv create
+npm install
 
-# create a new project in my-app
-npx sv create my-app
+// start custom express server
+npm run build && npm start
 ```
 
-## Developing
+Inspired by https://github.com/KazuumiN/sveltekit-ipx-unpic/, which used SvelteKit v1 and an earlier version of unpic.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## TODOs
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [ ] add ipx to vite server as well like https://zenn.dev/liquitous/articles/c2acb2764b6c40 ?
