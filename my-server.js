@@ -2,7 +2,6 @@ import { handler } from './build/handler.js';
 import express from 'express';
 import {
     createIPX,
-    ipxFSStorage,
     ipxHttpStorage,
     createIPXNodeServer
 } from "ipx";
@@ -18,7 +17,8 @@ app.get('/healthcheck', (req, res) => {
 ;
 // ipx image optimizer
 const ipx = createIPX({
-    // With httpStorage: ipxHttpStorage({ domains: ["your-domain.com"] }) IPX will optimize images coming for a given domain.
+    // Allowed domains - with httpStorage: ipxHttpStorage({ domains: ["your-domain.com", "second-domain.com"] }), 
+    // ipx will optimize images coming for a given domain.
     httpStorage: ipxHttpStorage({ domains: ["picsum.photos"] }),
 });
 app.use("/_ipx", createIPXNodeServer(ipx));
